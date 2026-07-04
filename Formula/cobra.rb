@@ -12,7 +12,7 @@ class Cobra < Formula
         sha256 "a571f33bb85d7dba41e031eb219c2b9130e8b78307d110c17af041707de3e80d"
       else
         url "https://github.com/Xznder1984/Cobra/releases/download/v0.2.0/cobra-0.2.0-macos-x86_64.tar.gz"
-        sha256 "1896a2635c06ba74ef117b748f0d0052ee68f3699b32d0918c1a2e1b04ed6807"
+        sha256 "686b5a7233cdddc85a9a54d96b1108324f3b3454b111b4cd0842ba5cb20d9f58"
       end
     end
 
