@@ -8,17 +8,17 @@ class Cobra < Formula
   stable do
     on_macos do
       if Hardware::CPU.arm?
-        url "https://github.com/Xznder1984/Cobra/releases/download/v0.1.0/cobra-0.1.0-macos-x86_64.tar.gz"
-        sha256 "6d30433f2525b69f74f9dfe5a8614c813eae4fdee1febe1469f822187ae4fc09"
+        url "https://github.com/Xznder1984/Cobra/releases/download/v0.2.0/cobra-0.2.0-macos-arm64.tar.gz"
+        sha256 "a571f33bb85d7dba41e031eb219c2b9130e8b78307d110c17af041707de3e80d"
       else
-        url "https://github.com/Xznder1984/Cobra/archive/refs/tags/v0.1.0.tar.gz"
-        sha256 "7176e63fa39f522651ff50563e3bcf9f25f6251128fa0a10a255b4032459fa35"
+        url "https://github.com/Xznder1984/Cobra/releases/download/v0.2.0/cobra-0.2.0-macos-x86_64.tar.gz"
+        sha256 "1896a2635c06ba74ef117b748f0d0052ee68f3699b32d0918c1a2e1b04ed6807"
       end
     end
 
     on_linux do
-      url "https://github.com/Xznder1984/Cobra/releases/download/v0.1.0/cobra-0.1.0-linux-x86_64.tar.gz"
-      sha256 "3454e9636519e7c22a943a4438251940ca6fa664912ef2c055dde5011534f9d8"
+      url "https://github.com/Xznder1984/Cobra/releases/download/v0.2.0/cobra-0.2.0-linux-x86_64.tar.gz"
+      sha256 "016e614beaa52ff02443dfd929a20cb82180b87c5113b6d0c85de63739d6bffd"
     end
   end
 
@@ -26,11 +26,6 @@ class Cobra < Formula
 
   def install
     if build.head?
-      system "make", "build"
-      bin.install "cli/bin/cobra"
-      bin.install "compiler/bin/cobrac"
-      lib.install "runtime/libcobra_runtime.a"
-    elsif OS.mac? && !Hardware::CPU.arm?
       system "make", "build"
       bin.install "cli/bin/cobra"
       bin.install "compiler/bin/cobrac"
